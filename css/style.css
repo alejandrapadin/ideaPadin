@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+}
+
+
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(3, 3, 3);
+}
+
+h2 {
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(8, 8, 8);
+}
+
+p {
+    font-size: 1.2em;
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+#establecerAlarma {
+    background-color: rgb(111, 2, 184);
+    font-size: 2.5em;
+    padding: 20px;
+    margin: 10px;
+    color: aliceblue;
+    font-family: 'Source Code Pro', monospace;
+    border-radius: 5px;
+    
+
+
+}
+
+#horaAlarma {
+    background-color: rgb(157, 60, 223);
+    color: rgb(5, 5, 5);
+    font-size: 2.5em;
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+   
+}
