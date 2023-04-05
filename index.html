@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Alarma despertador</title>
 </head>
@@ -18,38 +17,9 @@
     <input type="time" id="horaAlarma">
     <button id="establecerAlarma">Establecer Alarma</button>
 
-    <script>
-        // Obtener los elementos del DOM
-        let horaAlarmaInput = document.getElementById('horaAlarma');
-        let establecerAlarmaBtn = document.getElementById('establecerAlarma');
 
-        // Asignar una función al botón "Establecer Alarma"
-        establecerAlarmaBtn.addEventListener('click', function () {
-            // Obtener la hora actual
-            let horaActual = new Date();
-            // Obtener la hora establecida para la alarma
-            let horaAlarma = horaAlarmaInput.value;
-            // Separar la hora y los minutos de la hora establecida
-            let hora = horaAlarma.split(':')[0];
-            let minutos = horaAlarma.split(':')[1];
-            // Crear un nuevo objeto Date con la hora de la alarma
-            let alarma = new Date(horaActual.getFullYear(), horaActual.getMonth(), horaActual.getDate(), hora, minutos);
-            // Calcular la diferencia entre la hora actual y la hora de la alarma
-            let diferencia = alarma.getTime() - horaActual.getTime();
-            // Si la hora de la alarma es anterior a la hora actual, sumar 24 horas al objeto Date de la alarma
-            if (diferencia < 0) {
-                alarma.setDate(alarma.getDate() + 1);
-                diferencia = alarma.getTime() - horaActual.getTime();
-            }
-            // Establecer un temporizador para que la alarma suene
-            setTimeout(function () {
-                // Crear un elemento de audio para reproducir el sonido de la alarma
-                let audio = new Audio('https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3');
-                audio.play();
-                // Crear un elemento HTML para mostrar un mensaje de alarma
-                let mensaje = document.createElement('h2');
-                mensaje.innerText = '¡Arriba! ¡Que ser programador no es fácil!';
-                document.body.appendChild(mensaje);
-            }, diferencia);
-        });
-    </script>
+    
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
